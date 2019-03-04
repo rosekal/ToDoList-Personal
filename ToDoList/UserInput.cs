@@ -28,7 +28,7 @@ namespace ToDoList {
             InitializeComponent();
             SetTitle(null);
 
-            string s = JSONHelper.GetMovies();
+            Movie m = Movie.GetDisneyMovie();
 
             fm = new FileManager();
 
@@ -391,6 +391,10 @@ namespace ToDoList {
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) {
             e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
+        private void topRatedToolStripMenuItem_Click(object sender, EventArgs e) {
+            
         }
 
         private void PrintList() {
